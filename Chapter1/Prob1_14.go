@@ -20,12 +20,12 @@ func main() {
 	k:=1
 	var n float64
 
-	for err!=nil{
-		if k>=len(arguments){
-			fmt.Println("none of the arguments are float")
+	for err!=nil{ //continue till gotten error
+		if k>=len(arguments){ //exit when all arguments are finished and you get error for all
+			fmt.Println("None of the arguments are float")
 			return
 		}
-		n, err=strconv.ParseFloat(arguments[k], 64)
+		n, err=strconv.ParseFloat(arguments[k], 64)    //check for float
 		k++
 	}
 	min, max:= n,n
